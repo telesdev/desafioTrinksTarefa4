@@ -17,21 +17,20 @@ E a condição escolhida foi pelo fato do fatorial de 0 ser 1.
 Segue abaixo a função corrigida:
 
 function fat(i) {
-	if (typeof i !== 'number') {
-  	return console.log('Número inválido. A função so aceita números inteiros maiores ou igual a 0')
-  }
-  if (i == 0)
-    return 1
-  else
-    return i * fat(i-1)  
+    if (i < 0 || typeof i !== 'number')
+  	    return console.log('Número inválido. A função so aceita números inteiros maiores ou igual a 0')
+    else if (i == 0)
+        return 1
+    else
+        return i * fat(i-1)  
 }
 `)
 
 function fat(i) {
-	if (i < 0 || typeof i !== 'number')
-  	return console.log('Número inválido. A função so aceita números inteiros maiores ou igual a 0')
-  else if (i == 0)
-    return 1
-  else
-    return i * fat(i-1)  
+    if (i < 0 || typeof i !== 'number')
+  	    return console.log('Número inválido. A função so aceita números inteiros maiores ou igual a 0')
+    else if (i == 0)
+        return 1
+    else
+        return i * fat(i-1)  
 }
